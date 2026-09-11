@@ -1,0 +1,17 @@
+{
+  "name": "SS Oto Elektrik & Aksesuar",
+  "short_name": "SS Oto",
+  "lang": "tr",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#101214",
+  "theme_color": "#edfa45",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
