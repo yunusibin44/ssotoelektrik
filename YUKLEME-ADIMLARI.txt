@@ -1,0 +1,19 @@
+SS OTO ELEKTRIK - GITHUB PAGES 404 DUZELTME
+
+1. Bu ZIP dosyasini bilgisayarinda ac.
+2. GitHub'da yunusibin44/ssotoelektrikk deposunun Code sayfasina gir.
+3. Add file > Upload files secenegini ac.
+4. Bu klasorun kendisini degil, ICINDEKI DOSYA VE KLASORLERIN TAMAMINI
+   depo ana dizinine surukle.
+5. Sayfanin sonunda Commit changes dugmesine bas.
+6. Actions sekmesinde "Deploy static content to Pages" isleminin yesil
+   tamamlanmasini bekle.
+7. https://ssotoelektrik.com adresini Ctrl+F5 ile yenile.
+
+ONEMLI KONTROL:
+GitHub Code sayfasinda index.html, CNAME ve assets klasoru depo ana
+dizininde gorunmelidir. index.html yalnizca dist klasorunde kalirsa ana
+adres 404 verir.
+
+DNS veya Custom domain ayarini degistirme. Ekran goruntundeki DNS check
+successful ve Enforce HTTPS ayarlari dogru.
