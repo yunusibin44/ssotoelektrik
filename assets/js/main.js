@@ -13,7 +13,7 @@ toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('open');to
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){document.querySelectorAll('details[open]').forEach(el=>el.open=false);if(nav?.classList.contains('open')){closeMenu();toggle.focus();}}});
 document.addEventListener('click',event=>{
   const link=event.target.closest('a');
-  if(link){if(nav?.contains(link))closeMenu();const name=link.dataset.track;if(name){window.dataLayer.push({event:name,cta_id:link.id,page_path:location.pathname});if(name==='whatsapp_click')reportContactConversion();}}
+  if(link){if(nav?.contains(link))closeMenu();const name=link.dataset.track;if(name){window.dataLayer.push({event:name,cta_id:link.id,page_path:location.pathname});}}
   if(!event.target.closest('.site-nav details'))document.querySelectorAll('.site-nav details[open]').forEach(el=>el.open=false);
   if(!event.target.closest('.site-header'))closeMenu();
 });
@@ -41,4 +41,5 @@ document.querySelectorAll('.contact-form').forEach(form=>{
     window.open(url,'_blank','noopener,noreferrer');
   });
 });
+
 
