@@ -2,7 +2,9 @@
 window.dataLayer=window.dataLayer||[];
 const ADS_CONTACT_CONVERSION='AW-18453476969/rPArCLS8yvkcEOnspt9E';
 function reportContactConversion(){
-  if(typeof window.gtag==='function')window.gtag('event','conversion',{send_to:ADS_CONTACT_CONVERSION});
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};
+  window.gtag('event','conversion',{send_to:ADS_CONTACT_CONVERSION});
 }
 const nav=document.querySelector('.site-nav');
 const toggle=document.querySelector('.menu-toggle');
@@ -39,3 +41,4 @@ document.querySelectorAll('.contact-form').forEach(form=>{
     window.open(url,'_blank','noopener,noreferrer');
   });
 });
+
