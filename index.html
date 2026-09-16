@@ -11,21 +11,27 @@
 
   gtag('config', 'AW-18453476969');
 </script>
-<!-- Event snippet for Kişi conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<!-- Google Ads WhatsApp conversion -->
 <script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18453476969/rPArCLS8yvkcEOnspt9E',
-      'event_callback': callback
+(function () {
+  var conversionId = 'AW-18453476969/rPArCLS8yvkcEOnspt9E';
+
+  function sendWhatsappConversion() {
+    if (typeof gtag !== 'function') return;
+
+    gtag('event', 'conversion', {
+      'send_to': conversionId,
+      'event_timeout': 2000
+    });
+  }
+
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('a[data-ads-conversion="whatsapp"]');
+    if (!link) return;
+
+    sendWhatsappConversion();
   });
-  return false;
-}
+})();
 </script>
 
   <meta charset="utf-8">
@@ -131,7 +137,7 @@ function gtag_report_conversion(url) {
                       d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
                   </svg></i> Hemen Ara: 0534 570 07 33</a><a id="hero-whatsapp" class="btn btn-outline"
                 href="https://wa.me/905345700733?text=Merhaba%20SS%20Oto%20Elektrik%2C%20arac%C4%B1m%20i%C3%A7in%20bilgi%20almak%20istiyorum."
-                target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" onclick="gtag_report_conversion()" aria-label="WhatsApp’tan Yaz"><i
+                target="_blank" rel="noopener noreferrer" data-ads-conversion="whatsapp" aria-label="WhatsApp’tan Yaz"><i
                   class="bi bi-whatsapp" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
                     height="1em" fill="currentColor" focusable="false" viewBox="0 0 16 16">
                     <path
@@ -503,7 +509,7 @@ function gtag_report_conversion(url) {
             <p class="intro">Aracınızın durumunu en doğru şekilde değerlendirmek için bize doğrudan ulaşabilirsiniz.</p>
             <a id="faq-whatsapp" class="text-link"
               href="https://wa.me/905345700733?text=Merhaba%20SS%20Oto%20Elektrik%2C%20arac%C4%B1m%20i%C3%A7in%20bilgi%20almak%20istiyorum."
-              target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" onclick="gtag_report_conversion()"
+              target="_blank" rel="noopener noreferrer" data-ads-conversion="whatsapp"
               aria-label="Sorunuzu WhatsApp’tan yazın"><i class="bi bi-whatsapp" aria-hidden="true"><svg
                   xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" focusable="false"
                   viewBox="0 0 16 16">
@@ -599,7 +605,7 @@ function gtag_report_conversion(url) {
                 </svg></i>
               <div><span>WHATSAPP</span><a id="contact-whatsapp" class="text-link"
                   href="https://wa.me/905345700733?text=Merhaba%20SS%20Oto%20Elektrik%2C%20arac%C4%B1m%20i%C3%A7in%20bilgi%20almak%20istiyorum."
-                  target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" onclick="gtag_report_conversion()" aria-label="Mesaj gönderin"><i
+                  target="_blank" rel="noopener noreferrer" data-ads-conversion="whatsapp" aria-label="Mesaj gönderin"><i
                     class="bi bi-whatsapp" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
                       height="1em" fill="currentColor" focusable="false" viewBox="0 0 16 16">
                       <path
@@ -746,7 +752,7 @@ function gtag_report_conversion(url) {
             d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
         </svg></i> Hemen Ara</a><a id="mobile-whatsapp" class="btn btn-outline"
       href="https://wa.me/905345700733?text=Merhaba%20SS%20Oto%20Elektrik%2C%20arac%C4%B1m%20i%C3%A7in%20bilgi%20almak%20istiyorum."
-      target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" onclick="gtag_report_conversion()" aria-label="WhatsApp"><i
+      target="_blank" rel="noopener noreferrer" data-ads-conversion="whatsapp" aria-label="WhatsApp"><i
         class="bi bi-whatsapp" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
           fill="currentColor" focusable="false" viewBox="0 0 16 16">
           <path
@@ -755,5 +761,3 @@ function gtag_report_conversion(url) {
 </body>
 
 </html>
-
-
